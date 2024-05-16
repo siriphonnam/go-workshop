@@ -1,0 +1,30 @@
+### getProduct
+GET http://localhost:8081/api/v2/product HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTU3NjMzNzMsImlkIjoxLCJsZXZlbCI6Im5vcm1hbCIsInVzZXJuYW1lIjoiYWRtaW4xIn0.pLsKgiiqTWHnWVlfTLkJjDGbGIp5ha2LCrCcvq8u95s
+
+### getProduct with token
+GET http://localhost:8081/api/v2/product HTTP/1.1
+
+
+### create product
+POST http://localhost:8081/api/v2/product HTTP/1.1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name";
+
+Angular
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="stock";
+
+300
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="price";
+
+180
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="test.jpg"
+Content-Type: image/png
+
+< ./test.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
